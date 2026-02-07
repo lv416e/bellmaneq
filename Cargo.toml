@@ -1,0 +1,13 @@
+[workspace]
+members = ["crates/*"]
+resolver = "2"
+
+[workspace.dependencies]
+ndarray = { version = "0.16", features = ["rayon"] }
+rayon = "1.10"
+thiserror = "2"
+pyo3 = { version = "0.27", features = ["extension-module"] }
+numpy = "0.27"
+rand = "0.9"
+rand_distr = "0.5"
+criterion = { version = "0.5", features = ["html_reports"] }
