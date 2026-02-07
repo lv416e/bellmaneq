@@ -1,0 +1,14 @@
+[package]
+name = "bellmaneq-finance"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bellmaneq-core = { path = "../bellmaneq-core" }
+
+[dev-dependencies]
+criterion = { workspace = true }
+
+[[bench]]
+name = "option_bench"
+harness = false
