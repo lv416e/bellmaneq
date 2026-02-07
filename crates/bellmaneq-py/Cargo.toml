@@ -1,0 +1,16 @@
+[package]
+name = "bellmaneq-py"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "bellmaneq"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+bellmaneq-core = { path = "../bellmaneq-core" }
+bellmaneq-games = { path = "../bellmaneq-games" }
+bellmaneq-finance = { path = "../bellmaneq-finance" }
+pyo3 = { workspace = true }
+numpy = { workspace = true }
+ndarray = { workspace = true }
