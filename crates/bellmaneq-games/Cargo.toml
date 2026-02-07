@@ -1,0 +1,7 @@
+[package]
+name = "bellmaneq-games"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bellmaneq-core = { path = "../bellmaneq-core" }
