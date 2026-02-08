@@ -18,6 +18,10 @@ from bellmaneq.viz import (  # noqa: E402
     plot_option_payoff,
     plot_price_convergence,
     plot_option_surface,
+    plot_cake_eating,
+    plot_mccall,
+    plot_growth_model,
+    plot_income_fluctuation,
 )
 
 
@@ -113,6 +117,45 @@ class TestFinanceViz:
             steps=20,
             n_spot_points=5,
             n_time_points=5,
+        )
+        assert isinstance(fig, Figure)
+        plt.close(fig)
+
+
+class TestEconViz:
+    """Smoke tests for economics visualizations."""
+
+    def test_plot_cake_eating(self):
+        result = bellmaneq.solve_cake_eating(discount=0.95, n_cake=20, n_consumption=20)
+        fig = plot_cake_eating(
+            result.get_cake_grid(), result.get_values(), result.get_policy(),
+        )
+        assert isinstance(fig, Figure)
+        plt.close(fig)
+
+    def test_plot_mccall(self):
+        result = bellmaneq.solve_mccall(discount=0.95, n_wages=20)
+        fig = plot_mccall(
+            result.get_wage_grid(), result.get_values(),
+            result.get_policy(), result.reservation_wage,
+        )
+        assert isinstance(fig, Figure)
+        plt.close(fig)
+
+    def test_plot_growth_model(self):
+        result = bellmaneq.solve_growth(discount=0.95, n_k=20, n_z=5)
+        fig = plot_growth_model(
+            result.get_capital_grid(), result.get_productivity_grid(),
+            result.get_values(), result.get_policy(),
+        )
+        assert isinstance(fig, Figure)
+        plt.close(fig)
+
+    def test_plot_income_fluctuation(self):
+        result = bellmaneq.solve_income_fluctuation(discount=0.95, n_a=20, n_y=5)
+        fig = plot_income_fluctuation(
+            result.get_asset_grid(), result.get_income_grid(),
+            result.get_values(), result.get_policy(), result.get_savings_policy(),
         )
         assert isinstance(fig, Figure)
         plt.close(fig)
