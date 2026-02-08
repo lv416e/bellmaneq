@@ -11,6 +11,14 @@ from bellmaneq._core import (
     PyConnectFour as ConnectFour,
     PyAmericanOptionResult,
     price_american_option,
+    PyCakeEatingResult,
+    PyMcCallResult,
+    PyGrowthResult,
+    PyIncomeFluctuationResult,
+    solve_cake_eating,
+    solve_mccall,
+    solve_growth,
+    solve_income_fluctuation,
 )
 
 __all__ = [
@@ -21,4 +29,12 @@ __all__ = [
     "ConnectFour",
     "PyAmericanOptionResult",
     "price_american_option",
+    "PyCakeEatingResult",
+    "PyMcCallResult",
+    "PyGrowthResult",
+    "PyIncomeFluctuationResult",
+    "solve_cake_eating",
+    "solve_mccall",
+    "solve_growth",
+    "solve_income_fluctuation",
 ]

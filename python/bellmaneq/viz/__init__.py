@@ -8,6 +8,14 @@ from bellmaneq.viz.finance import (
     plot_price_convergence,
     plot_option_surface,
 )
+from bellmaneq.viz.econ import (
+    plot_value_function,
+    plot_policy_function,
+    plot_cake_eating,
+    plot_mccall,
+    plot_growth_model,
+    plot_income_fluctuation,
+)
 
 __all__ = [
     "plot_convergence",
@@ -19,4 +27,10 @@ __all__ = [
     "plot_option_payoff",
     "plot_price_convergence",
     "plot_option_surface",
+    "plot_value_function",
+    "plot_policy_function",
+    "plot_cake_eating",
+    "plot_mccall",
+    "plot_growth_model",
+    "plot_income_fluctuation",
 ]
