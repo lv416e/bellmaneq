@@ -11,6 +11,7 @@ crate-type = ["cdylib", "rlib"]
 bellmaneq-core = { path = "../bellmaneq-core" }
 bellmaneq-games = { path = "../bellmaneq-games" }
 bellmaneq-finance = { path = "../bellmaneq-finance" }
+bellmaneq-econ = { path = "../bellmaneq-econ" }
 pyo3 = { workspace = true }
 numpy = { workspace = true }
 ndarray = { workspace = true }
